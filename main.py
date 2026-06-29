@@ -51,6 +51,8 @@ while running:
     # Draw snake segments
     for segment in segments:
         pg.draw.rect(screen, "green", segment)
+        color = (min(255, 50 + length * 10), 255 - min(200, length * 5), 150)
+        pg.draw.rect(screen, color, segment, border_radius=10)
 
     # Display score
     score_text = font.render(f"Score: {length - 1}", True, (255, 255, 255))
